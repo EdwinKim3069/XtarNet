@@ -1,0 +1,65 @@
+backbone_class: "metaCNN_tiered"
+model_class: "XtarNet"
+resnet_config: {
+    height: 84
+    width: 84
+    num_channel: 3
+    num_residual_units: 2
+    num_residual_units: 2
+    num_residual_units: 2
+    num_residual_units: 2
+    num_filters: 64
+    num_filters: 64
+    num_filters: 128
+    num_filters: 256
+    num_filters: 512
+    strides: 1 
+    strides: 2
+    strides: 2
+    strides: 2
+    init_stride: 1
+    init_max_pool: true
+    init_filter: 7
+    use_bottleneck: false
+    wd: 7e-4
+    normalization: "batch_norm"
+    num_norm_groups: 32
+    global_avg_pool: true
+    data_format: "NCHW"
+    version: "v1"
+    leaky_relu: 0.0
+    filter_initialization: "normal"
+    add_last_relu: false
+}
+
+protonet_config: {}
+
+transfer_config: {
+    old_and_new: true
+    meta_only: true
+    train_wclass_a: false
+    replace_grad_wclass_a: false
+    cost_a_ratio: 0.0
+    cost_b_ratio: 1.0
+    final_cost_a_ratio: 0.0
+    reduce_slow_layers: 1.0
+    cache_transfer_loss_var: false
+}
+
+optimizer_config: {
+    optimizer: "momentum"
+    lr_decay_steps: 4000
+    lr_decay_steps: 8000
+    max_train_steps: 12000
+    lr_list: 1e-1
+    lr_list: 1e-2
+    lr_list: 1e-3
+    batch_size: 256
+}
+
+train_config: {
+    steps_per_val: 1000
+    steps_per_log: 10
+    steps_per_save: 1000
+}
+
