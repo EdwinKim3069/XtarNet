@@ -2,7 +2,7 @@
 
 This repository contains the code for the following ICML 2020 paper:
 
-[**XtarNet: Learning to Extract Task-Adaptive Representation for Incremental Few-Shot Learning**](https://arxiv.org/pdf/2003.08561.pdf)
+[**XtarNet: Learning to Extract Task-Adaptive Representation for Incremental Few-Shot Learning**](https://arxiv.org/abs/2003.08561)
 
 ## Dependencies
 This code was tested on the following environment:
