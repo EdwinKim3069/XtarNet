@@ -337,8 +337,6 @@ class XtarNetModelBase(object):
     var_list += self.get_transfer_loss_weights(name='encoder_r')
     var_list += self.get_transfer_loss_weights(name='metaCNN')
     var_list += self.get_transfer_loss_weights(name='w_class_b')
-    # for var in var_list:
-    #     print(var)
 
     proto_config = self.config.protonet_config
     transfer_config = self.config.transfer_config
