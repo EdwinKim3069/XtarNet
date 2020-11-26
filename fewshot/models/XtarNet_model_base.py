@@ -353,8 +353,6 @@ class XtarNetModelBase(object):
       if not proto_config.cosine_softmax:
         var_list += [self.b_class_a]
 
-    # for var in var_list:
-    #     print(var)
     print('get_meta_weights done')
     return var_list
 
