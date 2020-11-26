@@ -320,8 +320,6 @@ class XtarNetModelBase(object):
     print('get_transfer_loss_weights')
     var_list = tf.trainable_variables()
     var_list = list(filter(lambda x: name in x.name, var_list))
-    # for x in var_list:
-    #   print(x.name)
     print('get_transfer_loss_weights done')
     return var_list
 
